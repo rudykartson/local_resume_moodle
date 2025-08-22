@@ -33,8 +33,9 @@ if (\local_resume\local_resume::all_complete($courseid, $USER->id, $sectionid)) 
     if ($url) {
         redirect($url);
     } else {
-        redirect(new moodle_url('/course/view.php', ['id' => $courseid]), $customalldonemsg, null, \core\output\notification::INFO);
+        redirect(new moodle_url('/course/view.php', ['id' => $courseid]), $customalldonemsg, null, \core\output\notification::NOTIFY_INFO);
     }
 
 }
+
 
