@@ -18,4 +18,6 @@ $string['inside'] = 'Inside section/topic box';
 $string['hideifcomplete'] = 'Hide button if all activities complete';
 $string['privacy:metadata'] = 'The Resume plugin only tracks which activity a user last accessed for resuming.';
 $string['startagain'] = 'Start Again';
+
 $string['startagain_desc'] = 'Custom label for the Start Again button shown when the course or section is fully completed.';
+$string['privacy:metadata'] = 'The Resume Button plugin does not store any personal data because it only generates navigation links based on existing user course activity data already managed by Moodle core.';
