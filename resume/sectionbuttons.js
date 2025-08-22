@@ -1,3 +1,9 @@
+/**
+ * @package     local_resume
+ * @copyright   2025 Rudraksh Batra <batra.rudraksh@gmail.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 require(['jquery'], function($) {
     $(document).ready(function() {
         $('[id^="section-"], .section.main, .topics .section, .weeks .section, .flexsections .section, .onetopic .section').each(function() {
@@ -46,4 +52,5 @@ require(['jquery'], function($) {
             e.stopPropagation();
         });
     });
+
 });
