@@ -3,7 +3,11 @@
 **Resume Button for Moodle Courses and Sections**  
 This plugin provides a smart "Resume" or "Start Again" button that helps learners continue from where they left off in a course or section. It supports Moodle versions **4.2 to 5.0+**.
 
----
+---/**
+ * @package     local_resume
+ * @copyright   2025 Rudraksh Batra <batra.rudraksh@gmail.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 ## ✨ Features
 
