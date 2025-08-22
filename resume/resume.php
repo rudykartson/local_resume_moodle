@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * @package     local_resume
+ * @copyright   2025 Rudraksh Batra <batra.rudraksh@gmail.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 require_once(__DIR__.'/../../config.php');
 require_login();
 
@@ -28,4 +35,5 @@ if (\local_resume\local_resume::all_complete($courseid, $USER->id, $sectionid)) 
     } else {
         redirect(new moodle_url('/course/view.php', ['id' => $courseid]), $customalldonemsg, null, \core\output\notification::INFO);
     }
+
 }
