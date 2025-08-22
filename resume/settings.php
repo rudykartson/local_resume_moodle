@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * @package     local_resume
+ * @copyright   2025 Rudraksh Batra <batra.rudraksh@gmail.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 defined('MOODLE_INTERNAL') || die();
 
 if ($hassiteconfig) {
@@ -29,5 +36,6 @@ if ($hassiteconfig) {
     get_string('startagain_desc', 'local_resume'),
     'Start Again'
 ));
+
 
 }
