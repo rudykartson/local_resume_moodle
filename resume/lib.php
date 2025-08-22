@@ -42,7 +42,7 @@ function local_resume_extend_navigation_course($navigation, $course, $context) {
     global $PAGE;
 
     if ($PAGE->pagelayout === 'course') {
-        $PAGE->requires->js('/local/resume/sectionbuttons.js');
+        $PAGE->requires->js_call_amd('/local_resume/sectionbuttons','init');
     }
 }
 
@@ -123,4 +123,5 @@ function local_resume_render_resume_button($courseid, $sectionid = null) {
         'style' => 'margin:1em 0;display:inline-block;'
     ]);
 }
+
 
