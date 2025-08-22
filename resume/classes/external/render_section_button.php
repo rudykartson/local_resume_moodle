@@ -16,7 +16,7 @@ use external_api;
 use external_function_parameters;
 use external_value;
 
-class render_section_button extends external_api {
+class render_section_button extends \external_api {
     public static function execute_parameters() {
         return new external_function_parameters([
             'courseid' => new external_value(PARAM_INT, 'Course ID'),
@@ -26,13 +26,20 @@ class render_section_button extends external_api {
 
     public static function execute($courseid, $sectionid) {
         global $PAGE;
-        require_login($courseid);
 
-        $output = local_resume_render_resume_button($courseid, $sectionid);
-        return $output;
+        self::validate_parameters(self::execute_parameters(), [
+            'courseid' => $courseid,
+            'sectionid' => $sectionid
+        ]);
+
+        $PAGE->set_context(\context_course::instance($courseid));
+        $html = local_resume_render_resume_button($courseid, $sectionid);
+        return ['html' => $html];
     }
 
     public static function execute_returns() {
-        return new external_value(PARAM_RAW, 'HTML of resume button');
+        return new \external_single_structure([
+            'html' => new \external_value(PARAM_RAW, 'Resume button HTML')
+        ]);
     }
 }
