@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * @package     local_resume
+ * @copyright   2025 Rudraksh Batra <batra.rudraksh@gmail.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 defined('MOODLE_INTERNAL') || die();
 
 // Inject course-level Resume/Start button at the top of the course page.
@@ -116,3 +123,4 @@ function local_resume_render_resume_button($courseid, $sectionid = null) {
         'style' => 'margin:1em 0;display:inline-block;'
     ]);
 }
+
