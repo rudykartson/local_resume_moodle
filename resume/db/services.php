@@ -4,6 +4,8 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+<?php
+
 $functions = [
     'local_resume_render_section_button' => [
         'classname'   => 'local_resume\external\render_section_button',
