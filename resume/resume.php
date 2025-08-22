@@ -27,7 +27,7 @@ $customalldonemsg = get_config('local_resume', 'customalldonemsg') ?: get_string
 
 if (\local_resume\local_resume::all_complete($courseid, $USER->id, $sectionid)) {
     $msg = $customalldonemsg;
-    redirect(new moodle_url('/course/view.php', ['id' => $courseid]), $msg, null, \core\output\notification::INFO);
+    redirect(new moodle_url('/course/view.php', ['id' => $courseid]), $msg, null, \core\output\notification::NOTIFY_INFO);
 } else {
     $url = \local_resume\local_resume::get_first_activity_url($courseid, $sectionid);
     if ($url) {
@@ -37,3 +37,4 @@ if (\local_resume\local_resume::all_complete($courseid, $USER->id, $sectionid)) 
     }
 
 }
+
